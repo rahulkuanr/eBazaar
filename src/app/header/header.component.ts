@@ -7,10 +7,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
+  menuType: string = "default";
   @ViewChild('dropdownContent', { static: true }) dropdownContent!: ElementRef;
   constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.router.events.subscribe((val: any) => {
+      if(val.url) {
+        if(sessionStorage.getItem('sellerData') && val.url.includes('seller')){
+          this.menuType = "seller"
+        } else {
+          this.menuType = "default";
+        }
+      }
+    })
+  }
 
   navigateToSellerLogin(): void {
     this.router.navigate(['seller-auth']);
