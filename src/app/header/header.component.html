@@ -8,10 +8,10 @@
     </div>
     
     <ul>
-        <li>
+        <li id="login-menu" (mouseenter)="showDropdown()" (mouseleave)="hideDropdown()">
             <div class="dropdown">
                 <button class="dropbtn">Hello, sign in</button>
-                <div class="dropdown-content">
+                <div class="dropdown-content" #dropdownContent>
                     <a href="#">Sign in</a>
                     <a (click)="navigateToSellerLogin()">Seller Center</a>
                 </div>
