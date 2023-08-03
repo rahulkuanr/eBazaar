@@ -14,6 +14,7 @@
     <!-- Start of Sign in form -->
     <div *ngIf="isLoginForm" class="seller-signin">
         <h2>Login To Your Seller Account</h2>
+        <p class="error">{{ loginError }}</p>
         <form #sellerLoginForm="ngForm" (ngSubmit)="login(sellerLoginForm.value)" class="eb-form">
             <input class="eb-form-input" ngModel name=email type="email" placeholder="Email">
             <input class="eb-form-input" ngModel name="password" type="password" placeholder="Password">

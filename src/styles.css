@@ -1,31 +1,36 @@
 body {
-    font-family: sans-serif;
-    margin: 0;
+  font-family: sans-serif;
+  margin: 0;
 }
 .container {
-    margin: 0;
+  margin: 0;
 }
 .eb-form {
-    text-align: center;
-    display: flex;
-    margin: auto;
-    flex-direction: column;
-    width: 300px;
+  text-align: center;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  width: 300px;
 }
 .eb-form-input {
-    height: 35px;
-    margin-bottom: 20px;
-    padding-left: 10px;
-    border: 1px solid #a6a6a6;
-    border-top-color: #949494;
-    border-radius: 3px;
-    box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
-    outline-color: rgb(0, 195, 255);
+  height: 35px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  border: 1px solid #a6a6a6;
+  border-top-color: #949494;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 1px 0 rgba(0, 0, 0, 0.07) inset;
+  outline-color: rgb(0, 195, 255);
 }
 .eb-form-button {
-    height: 35px;
-    border: 1px solid #a6a6a6;
-    cursor: pointer;
-    background-color: #febd69;
-    border-radius: 5px;
+  height: 35px;
+  border: 1px solid #a6a6a6;
+  cursor: pointer;
+  background-color: #febd69;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
 }
