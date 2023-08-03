@@ -6,9 +6,17 @@
             search
             </span></button>
     </div>
+    
     <ul>
-        <li><a href="#">Hello, sign in</a></li>
-        <li><a (click)="navigateToSellerLogin()">Seller</a></li>
+        <li>
+            <div class="dropdown">
+                <button class="dropbtn">Hello, sign in</button>
+                <div class="dropdown-content">
+                    <a href="#">Sign in</a>
+                    <a (click)="navigateToSellerLogin()">Seller Center</a>
+                </div>
+              </div> 
+        </li>
         <li><a href="#">Cart(0)</a></li>
     </ul>
 </nav>
