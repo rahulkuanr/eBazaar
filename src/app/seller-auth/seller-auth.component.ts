@@ -9,7 +9,7 @@ import { SignUp } from '../data-type';
   styleUrls: ['./seller-auth.component.css']
 })
 export class SellerAuthComponent implements OnInit {
-
+  isLoginForm = true;
   constructor(private sellerService: SellerService, private router: Router) { }
 
   ngOnInit(): void {
@@ -18,6 +18,18 @@ export class SellerAuthComponent implements OnInit {
 
   signUp(data: SignUp): void {
     this.sellerService.sellerSignUp(data)
+  }
+
+  login(data:any): void {
+    
+  }
+
+  showLoginForm() {
+    this.isLoginForm = true;
+  }
+
+  showSignupForm() {
+    this.isLoginForm = false;
   }
 
 }
