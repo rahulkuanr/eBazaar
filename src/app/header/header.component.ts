@@ -28,6 +28,12 @@ export class HeaderComponent implements OnInit {
     this.hideDropdown();
   }
 
+  sellerLogout() {
+    sessionStorage.removeItem('sellerData');
+    this.router.navigate(['/']);
+    this.hideDropdown();
+  }
+
   showDropdown() {
     this.dropdownContent.nativeElement.style.display = 'block';
   }
