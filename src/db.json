@@ -26,7 +26,7 @@
       "color": "White",
       "category": "mobiles & tabs",
       "description": "the latest apple iphone 14",
-      "image-url": "https://m.media-amazon.com/images/I/618Bb+QzCmL._AC_UF1000,1000_QL80_.jpg",
+      "image": "https://m.media-amazon.com/images/I/618Bb+QzCmL._AC_UF1000,1000_QL80_.jpg",
       "id": 1
     },
     {
@@ -35,7 +35,7 @@
       "color": "Black",
       "category": "mobiles & tabs",
       "description": "An apple product",
-      "image-url": "https://rukminim2.flixcart.com/image/850/1000/xif0q/mobile/9/e/e/-original-imaghx9q5rvcdghy.jpeg?q=90",
+      "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/mobile/9/e/e/-original-imaghx9q5rvcdghy.jpeg?q=90",
       "id": 2
     }
   ]

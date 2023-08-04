@@ -1,0 +1,25 @@
+.products-list {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table td, table th {
+    border: 2px solid #232f3e;
+    padding: 5px;
+    min-height: 160px;
+}
+
+table td {
+    color: gray;
+}
+
+img#product-image {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+}

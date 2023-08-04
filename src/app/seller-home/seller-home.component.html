@@ -1,1 +1,25 @@
-<p>seller-home works!</p>
+<div class="products-list">
+    <h2>Your Products</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Color</th>
+                <th>Category</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of productList">
+                <td><img id="product-image" src="{{product.image}}" alt="product_image"></td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.color}}</td>
+                <td>{{product.category}}</td>
+                <td>{{product.description}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

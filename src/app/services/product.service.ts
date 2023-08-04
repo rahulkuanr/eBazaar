@@ -12,4 +12,8 @@ export class ProductService {
   addProduct(data: Product) {
     return this.httpClient.post('http://localhost:3000/products', data);
   }
+
+  getProductList() {
+    return this.httpClient.get<Array<Product>>('http://localhost:3000/products');
+  }
 }
