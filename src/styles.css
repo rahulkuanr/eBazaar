@@ -31,6 +31,10 @@ body {
   border-radius: 5px;
 }
 
+.eb-form-button:hover {
+  background-color: #ffac41;
+}
+
 .error {
   color: red;
 }
