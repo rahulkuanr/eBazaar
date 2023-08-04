@@ -7,24 +7,36 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  menuType: string = "default";
+  menuType: string = 'default';
+  sellerName: string = '';
   @ViewChild('dropdownContent', { static: true }) dropdownContent!: ElementRef;
   constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.router.events.subscribe((val: any) => {
-      if(val.url) {
-        if(sessionStorage.getItem('sellerData') && val.url.includes('seller')){
-          this.menuType = "seller"
+      if (val.url) {
+        if (
+          sessionStorage.getItem('sellerData') &&
+          val.url.includes('seller')
+        ) {
+          this.menuType = 'seller';
+          let seller = sessionStorage.getItem('sellerData');
+          let sellerData = seller && JSON.parse(seller);
+          this.sellerName = sellerData[0].name;
         } else {
-          this.menuType = "default";
+          this.menuType = 'default';
         }
       }
-    })
+    });
   }
 
   navigateToSellerLogin(): void {
     this.router.navigate(['seller-auth']);
+    this.hideDropdown();
+  }
+
+  navigateToAddProduct(): void {
+    this.router.navigate(['seller-add-product']);
     this.hideDropdown();
   }
 

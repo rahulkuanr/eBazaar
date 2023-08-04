@@ -10,7 +10,7 @@
     <div id="login-menu" (mouseenter)="showDropdown()" (mouseleave)="hideDropdown()">
         <div class="dropdown">
             <button *ngIf="menuType==='default'" class="dropbtn">Hello, sign in</button>
-            <button *ngIf="menuType==='seller'" class="dropbtn">Seller sellerName</button>
+            <button *ngIf="menuType==='seller'" class="dropbtn">Seller {{ sellerName | titlecase}}</button>
             <div class="dropdown-content" #dropdownContent>
                 <ng-container *ngIf="menuType==='default'" >
                     <a href="#">Sign in</a>
@@ -19,8 +19,8 @@
                     <a href="#">Logout</a>
                 </ng-container>
                 <ng-container *ngIf="menuType==='seller'">
-                    <a href="#">Products List</a>
-                    <a (click)="navigateToSellerLogin()">Add Product</a>
+                    <a (click)="navigateToSellerLogin()">Products List</a>
+                    <a (click)="navigateToAddProduct()">Add Product</a>
                     <a routerLink="/" (click)="hideDropdown()">Go to eBazaar</a>
                     <a (click)="sellerLogout()">Logout</a>
                 </ng-container>

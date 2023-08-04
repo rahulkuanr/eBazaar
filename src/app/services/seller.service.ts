@@ -30,12 +30,10 @@ export class SellerService {
   }
 
   sellerLogin(data: Login): void {
-    console.warn(data);
     this.httpClient.get(
       `http://localhost:3000/seller?email=${data.email}&password=${data.password}`,
       { observe: 'response' }
     ).subscribe((result: any) => {
-      console.warn(result);
       if(result && result.body && result.body.length) {
         sessionStorage.setItem('sellerData', JSON.stringify(result.body));
         this.router.navigate(['seller-home']);
