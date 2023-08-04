@@ -15,9 +15,8 @@ export class SellerAddProductComponent implements OnInit {
 
   addNewProduct(data: Product) {
     this.productService.addProduct(data).subscribe(result => {
-      console.log(result);
       if(result) {
-        this.productAddedMessage = "Product Added Successfully";
+        this.productAddedMessage = "Product Added Successfully!";
       }
       setTimeout(() => {this.productAddedMessage = undefined}, 3000);
     });

@@ -1,5 +1,6 @@
 <div class="products-list">
     <h2>Your Products</h2>
+    <p class="success">{{productDeletedMessage}}</p>
     <table>
         <thead>
             <tr>
@@ -9,6 +10,7 @@
                 <th>Color</th>
                 <th>Category</th>
                 <th>Description</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -19,6 +21,9 @@
                 <td>{{product.color}}</td>
                 <td>{{product.category}}</td>
                 <td>{{product.description}}</td>
+                <td id="action-buttons"><span (click)="deleteProduct(product.id)" class="material-symbols-outlined">delete</span>
+                    <span class="material-symbols-outlined">edit</span>
+                </td>
             </tr>
         </tbody>
     </table>

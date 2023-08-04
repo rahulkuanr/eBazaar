@@ -37,6 +37,33 @@
       "description": "An apple product",
       "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/mobile/9/e/e/-original-imaghx9q5rvcdghy.jpeg?q=90",
       "id": 2
+    },
+    {
+      "name": "Dell Laptop",
+      "price": "1,56,000",
+      "color": "gray",
+      "category": "laptops",
+      "description": "dell laptop",
+      "image": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/g-series/g16-7630/media-gallery/black/notebook-g16-7630-nt-black-gallery-1.psd?fmt=pjpg&pscan=auto&scl=1&wid=3500&hei=2625&qlt=100,1&resMode=sharp2&size=3500,2625&chrss=full&imwidth=5000",
+      "id": 3
+    },
+    {
+      "name": "HP Laptop",
+      "price": "1,20,000",
+      "color": "gray",
+      "category": "laptops",
+      "description": "hp laptop",
+      "image": "https://images.hindustantimes.com/tech/img/2022/07/18/1600x900/IMG_4316_1658126389416_1658126408126_1658126408126.jpg",
+      "id": 4
+    },
+    {
+      "name": "Macbook Pro",
+      "price": "2,20,000",
+      "color": "silver",
+      "category": "laptops",
+      "description": "apple macbook pro",
+      "image": "https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_14-16-inch_10182021_big.jpg.slideshow-xlarge_2x.jpg",
+      "id": 5
     }
   ]
 }
