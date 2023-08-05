@@ -22,7 +22,7 @@
                 <td>{{product.category}}</td>
                 <td>{{product.description}}</td>
                 <td id="action-buttons"><span (click)="deleteProduct(product.id)" class="material-symbols-outlined">delete</span>
-                    <span class="material-symbols-outlined">edit</span>
+                    <span (click)="navigateToUpdateProduct(product.id)" class="material-symbols-outlined">edit</span>
                 </td>
             </tr>
         </tbody>
