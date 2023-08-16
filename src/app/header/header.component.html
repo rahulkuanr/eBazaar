@@ -1,4 +1,4 @@
-<nav class="nav">
+<nav class="eb-nav">
     <h1 *ngIf="menuType==='default'"><a routerLink="/">eBazaar</a></h1>
     <h1 id="seller-logo" *ngIf="menuType==='seller'"><a (click)="navigateToSellerLogin()">eBazaar Seller</a></h1>
     <div *ngIf="menuType==='default'" class="search-box">
@@ -8,7 +8,7 @@
             </span></button>
     </div>
     <div id="login-menu" (mouseenter)="showDropdown()" (mouseleave)="hideDropdown()">
-        <div class="dropdown">
+        <div class="eb-dropdown">
             <button *ngIf="menuType==='default'" class="dropbtn">Hello, sign in</button>
             <button *ngIf="menuType==='seller'" class="dropbtn">Seller {{ sellerName | titlecase}}</button>
             <div class="dropdown-content" #dropdownContent>
