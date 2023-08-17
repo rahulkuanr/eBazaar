@@ -1,30 +1,59 @@
-<nav class="eb-nav">
-    <h1 *ngIf="menuType==='default'"><a routerLink="/">eBazaar</a></h1>
-    <h1 id="seller-logo" *ngIf="menuType==='seller'"><a (click)="navigateToSellerLogin()">eBazaar Seller</a></h1>
-    <div *ngIf="menuType==='default'" class="search-box">
-        <input type="text" name="" id="" placeholder="Search eBazaar" />
-        <button><span class="material-symbols-outlined">
-                search
-            </span></button>
-    </div>
-    <div id="login-menu" (mouseenter)="showDropdown()" (mouseleave)="hideDropdown()">
-        <div class="eb-dropdown">
-            <button *ngIf="menuType==='default'" class="dropbtn">Hello, sign in</button>
-            <button *ngIf="menuType==='seller'" class="dropbtn">Seller {{ sellerName | titlecase}}</button>
-            <div class="dropdown-content" #dropdownContent>
-                <ng-container *ngIf="menuType==='default'" >
-                    <a href="#">Sign in</a>
-                    <a (click)="navigateToSellerLogin()">Go to eBazaar Seller</a>
-                    <a href="#">Cart(0)</a>
-                    <a href="#">Logout</a>
-                </ng-container>
-                <ng-container *ngIf="menuType==='seller'">
-                    <a (click)="navigateToSellerLogin()">Products List</a>
-                    <a (click)="navigateToAddProduct()">Add Product</a>
-                    <a routerLink="/" (click)="hideDropdown()">Go to eBazaar</a>
-                    <a (click)="sellerLogout()">Logout</a>
-                </ng-container>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a *ngIf="menuType==='default'" class="navbar-brand" routerLink="/">eBazaar</a>
+        <a *ngIf="menuType==='seller'" class="navbar-brand" (click)="navigateToSellerLogin()">eBazaar Seller</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" (click)="isMenuCollapsed = !isMenuCollapsed">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarNav">
+            <div *ngIf="menuType==='default'" class="d-flex flex-grow-1 justify-content-center">
+                <form class="container-fluid" style="width: 50%;">
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="Search eBazaar">
+                        <span class="btn btn-warning input-group-text">
+                            <span class="material-symbols-outlined mt-2">search</span>
+                        </span>
+                    </div>
+                </form>
             </div>
+            <ul *ngIf="menuType==='default'" class="navbar-nav ms-auto">
+                <li ngbDropdown class="nav-item dropstart">
+                    <a ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Hello, sign in
+                    </a>
+                    <ul ngbDropdownMenu class="dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                        <li><a ngbDropdownItem class="dropdown-item" role="button" href="#">Sign in</a></li>
+                        <li><a ngbDropdownItem class="dropdown-item" role="button" (click)="navigateToSellerLogin()">Go
+                                to eBazaar Seller</a></li>
+                        <li><a ngbDropdownItem class="dropdown-item" role="button" href="#">Cart(0)</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a ngbDropdownItem class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul *ngIf="menuType==='seller'" class="navbar-nav ms-auto">
+                <li ngbDropdown class="nav-item dropstart">
+                    <a ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Seller {{ sellerName | titlecase}}
+                    </a>
+                    <ul ngbDropdownMenu class="dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                        <li><a ngbDropdownItem class="dropdown-item" role="button"
+                                (click)="navigateToSellerLogin()">Products List</a></li>
+                        <li><a ngbDropdownItem class="dropdown-item" role="button" (click)="navigateToAddProduct()">Add
+                                Product</a></li>
+                        <li><a ngbDropdownItem class="dropdown-item" role="button" routerLink="/">Go to eBazaar</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a ngbDropdownItem class="dropdown-item" (click)="sellerLogout()">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>

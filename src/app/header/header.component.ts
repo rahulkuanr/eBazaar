@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   menuType: string = 'default';
   sellerName: string = '';
-  @ViewChild('dropdownContent', { static: true }) dropdownContent!: ElementRef;
+  public isMenuCollapsed = true;
   constructor(private router: Router) {}
 
   ngOnInit(): void {
@@ -32,25 +32,14 @@ export class HeaderComponent implements OnInit {
 
   navigateToSellerLogin(): void {
     this.router.navigate(['seller-auth']);
-    this.hideDropdown();
   }
 
   navigateToAddProduct(): void {
     this.router.navigate(['seller-add-product']);
-    this.hideDropdown();
   }
 
   sellerLogout() {
     sessionStorage.removeItem('sellerData');
     this.router.navigate(['/']);
-    this.hideDropdown();
-  }
-
-  showDropdown() {
-    this.dropdownContent.nativeElement.style.display = 'block';
-  }
-
-  hideDropdown() {
-    this.dropdownContent.nativeElement.style.display = 'none';
   }
 }
