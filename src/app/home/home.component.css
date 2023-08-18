@@ -7,3 +7,9 @@
 .ebds-carousel-caption {
   text-shadow: 2px 2px #272525;
 }
+
+.ebds-card-img {
+  object-fit: contain;
+  height: 200px;
+  width: 200px;
+}
