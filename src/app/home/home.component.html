@@ -1,15 +1,12 @@
-<ngb-carousel
-	*ngIf="images"
-	[showNavigationArrows]="showNavigationArrows"
-	[showNavigationIndicators]="showNavigationIndicators"
->
-	<ng-template ngbSlide *ngFor="let image of images">
+<ngb-carousel class="m-2" *ngIf="popularProducts" [showNavigationArrows]="showNavigationArrows"
+	[showNavigationIndicators]="showNavigationIndicators">
+	<ng-template ngbSlide *ngFor="let product of popularProducts">
 		<div class="picsum-img-wrapper">
-			<img [src]="image" alt="Random slide" />
+			<img class="ebds-product-img" src="{{product.image}}" alt="Random slide" />
 		</div>
 		<div class="carousel-caption">
-			<h3>No mouse navigation</h3>
-			<p>This carousel hides navigation arrows and indicators.</p>
+			<h3 class="ebds-carousel-caption">{{product.name}}</h3>
+			<p class="ebds-carousel-caption">{{product.description}}</p>
 		</div>
 	</ng-template>
 </ngb-carousel>

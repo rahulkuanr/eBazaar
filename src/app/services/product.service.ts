@@ -27,6 +27,15 @@ export class ProductService {
   }
 
   updateProduct(product: Product) {
-    return this.httpClient.put(`http://localhost:3000/products/${product.id}`, product);
+    return this.httpClient.put(
+      `http://localhost:3000/products/${product.id}`,
+      product
+    );
+  }
+
+  popularProducts() {
+    return this.httpClient.get<Array<Product>>(
+      'http://localhost:3000/products?_limit=3'
+    );
   }
 }

@@ -39,15 +39,6 @@
       "id": 2
     },
     {
-      "name": "Dell Laptop",
-      "price": "1,20,000",
-      "color": "black",
-      "category": "laptops",
-      "description": "dell laptop",
-      "image": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/g-series/g16-7630/media-gallery/black/notebook-g16-7630-nt-black-gallery-1.psd?fmt=pjpg&pscan=auto&scl=1&wid=3500&hei=2625&qlt=100,1&resMode=sharp2&size=3500,2625&chrss=full&imwidth=5000",
-      "id": 3
-    },
-    {
       "name": "HP Laptop",
       "price": "1,20,000",
       "color": "gray",

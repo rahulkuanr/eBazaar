@@ -41,3 +41,7 @@ body {
 .success {
   color: green;
 }
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: #00000075;
+  border-radius: 5px;
+}

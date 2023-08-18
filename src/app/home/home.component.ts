@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../services/product.service';
+import { Product } from '../data-type';
 
 @Component({
   selector: 'app-home',
@@ -9,12 +11,15 @@ export class HomeComponent implements OnInit {
 
   showNavigationArrows = true;
 	showNavigationIndicators = true;
-	images = [1055, 194, 368].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  popularProducts: undefined | Product[];
 
-  constructor() {
+  constructor(private productService: ProductService) {
    }
 
   ngOnInit(): void {
+    this.productService.popularProducts().subscribe(products => {
+      this.popularProducts = products;
+    })
   }
 
 }

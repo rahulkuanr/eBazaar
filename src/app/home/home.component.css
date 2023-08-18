@@ -1,0 +1,9 @@
+.ebds-product-img {
+  object-fit: contain;
+  height: 400px;
+  width: 100%;
+}
+
+.ebds-carousel-caption {
+  text-shadow: 2px 2px #272525;
+}
